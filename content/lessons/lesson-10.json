@@ -1,0 +1,84 @@
+{
+  "id": "lesson-10",
+  "contentVersion": "2026-09-12.1",
+  "title": "Revisão do módulo",
+  "objective": "Revisar os três formatos com itens novos: ouvir-e-selecionar, palavra-significado e montar palavra — com a palavra nova ESCOLA.",
+  "prerequisites": ["lesson-09"],
+  "estimatedMinutes": 7,
+  "intro": {
+    "key": "lesson-10/intro",
+    "text": "Última lição deste módulo! Vamos revisar tudo o que você praticou, com uma palavra nova no meio do caminho."
+  },
+  "outro": {
+    "key": "lesson-10/outro",
+    "text": "Você terminou o primeiro módulo! Muito bem pelo seu esforço. Volte quando quiser para revisar ou continuar."
+  },
+  "activities": [
+    {
+      "id": "lesson-10-a1",
+      "type": "listen-and-select",
+      "narratesTarget": true,
+      "prompt": { "key": "lesson-10/a1-prompt", "text": "Toque na figura da escola." },
+      "options": [
+        { "id": "escola", "label": "ESCOLA", "image": "🏫", "audio": { "key": "words/escola", "text": "Escola" } },
+        { "id": "onibus", "label": "ÔNIBUS", "image": "🚌", "audio": { "key": "words/onibus", "text": "Ônibus" } },
+        { "id": "casa", "label": "CASA", "image": "🏠", "audio": { "key": "words/casa", "text": "Casa" } },
+        { "id": "maca", "label": "MAÇÃ", "image": "🍎", "audio": { "key": "words/maca", "text": "Maçã" } }
+      ],
+      "correctOptionId": "escola",
+      "hints": [
+        { "level": 1, "audio": { "key": "lesson-10/a1-dica1", "text": "É o lugar onde a gente aprende." } },
+        { "level": 2, "audio": { "key": "shared/dica-elimina", "text": "Vou esconder duas opções. Agora ficou mais fácil." }, "eliminateOptions": ["onibus", "maca"] }
+      ]
+    },
+    {
+      "id": "lesson-10-a2",
+      "type": "word-to-meaning",
+      "narratesTarget": false,
+      "target": "ESCOLA",
+      "targetAudio": { "key": "words/escola", "text": "Escola" },
+      "prompt": { "key": "lesson-10/a2-prompt", "text": "Leia a palavra na caixa e toque na figura que ela quer dizer." },
+      "options": [
+        { "id": "escola", "label": "ESCOLA", "image": "🏫", "audio": { "key": "words/escola", "text": "Escola" } },
+        { "id": "casa", "label": "CASA", "image": "🏠", "audio": { "key": "words/casa", "text": "Casa" } },
+        { "id": "onibus", "label": "ÔNIBUS", "image": "🚌", "audio": { "key": "words/onibus", "text": "Ônibus" } },
+        { "id": "sapo", "label": "SAPO", "image": "🐸", "audio": { "key": "words/sapo", "text": "Sapo" } }
+      ],
+      "correctOptionId": "escola",
+      "hints": [
+        { "level": 1, "audio": { "key": "lesson-10/a2-dica1", "text": "A palavra começa com a letra é." } },
+        { "level": 2, "audio": { "key": "shared/dica-elimina", "text": "Vou esconder duas opções. Agora ficou mais fácil." }, "eliminateOptions": ["onibus", "sapo"] }
+      ]
+    },
+    {
+      "id": "lesson-10-a3",
+      "type": "compose-word",
+      "narratesTarget": true,
+      "target": "ESCOLA",
+      "pieces": ["ES", "CO", "LA"],
+      "distractors": ["MA"],
+      "prompt": { "key": "lesson-10/a3-prompt", "text": "Agora monte a palavra escola por partes: és, có, lá." },
+      "hints": [
+        { "level": 1, "audio": { "key": "lesson-10/a3-dica1", "text": "A palavra começa com és." } },
+        { "level": 2, "audio": { "key": "shared/dica-elimina-pecas", "text": "Vou esconder a parte que não serve." }, "eliminateOptions": ["MA"] }
+      ]
+    },
+    {
+      "id": "lesson-10-a4",
+      "type": "listen-and-select",
+      "narratesTarget": true,
+      "prompt": { "key": "lesson-10/a4-prompt", "text": "Para fechar: toque na placa que mostra a saída." },
+      "options": [
+        { "id": "saida", "label": "SAÍDA", "image": "🚪", "audio": { "key": "words/saida", "text": "Saída" } },
+        { "id": "pare", "label": "PARE", "image": "🛑", "audio": { "key": "words/pare", "text": "Pare" } },
+        { "id": "perigo", "label": "PERIGO", "image": "⚠️", "audio": { "key": "words/perigo", "text": "Perigo" } },
+        { "id": "escola", "label": "ESCOLA", "image": "🏫", "audio": { "key": "words/escola", "text": "Escola" } }
+      ],
+      "correctOptionId": "saida",
+      "hints": [
+        { "level": 1, "audio": { "key": "lesson-10/a4-dica1", "text": "É a placa que mostra a porta para sair." } },
+        { "level": 2, "audio": { "key": "shared/dica-elimina", "text": "Vou esconder duas opções. Agora ficou mais fácil." }, "eliminateOptions": ["pare", "escola"] }
+      ]
+    }
+  ]
+}

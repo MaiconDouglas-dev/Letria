@@ -1,0 +1,72 @@
+{
+  "id": "lesson-06",
+  "contentVersion": "2026-09-12.1",
+  "title": "Palavras da rua",
+  "objective": "Diante de palavras frequentes em placas e avisos (PARE, SAÍDA, PERIGO), a pessoa toca no significado correspondente.",
+  "prerequisites": ["lesson-05"],
+  "estimatedMinutes": 6,
+  "intro": {
+    "key": "lesson-06/intro",
+    "text": "Na rua, algumas palavras avisam a gente: pare, saída, perigo. Nesta lição você vai ler a palavra e tocar no que ela significa."
+  },
+  "outro": { "key": "shared/outro", "text": "Você chegou ao fim desta lição. Muito bem pelo seu esforço!" },
+  "activities": [
+    {
+      "id": "lesson-06-a1",
+      "type": "word-to-meaning",
+      "narratesTarget": false,
+      "target": "PARE",
+      "targetAudio": { "key": "words/pare", "text": "Pare" },
+      "prompt": { "key": "lesson-06/a1-prompt", "text": "Esta palavra aparece numa placa vermelha na rua. Toque no que ela manda fazer." },
+      "options": [
+        { "id": "pare", "label": "PARE", "image": "🛑", "audio": { "key": "words/pare", "text": "Pare" } },
+        { "id": "saida", "label": "SAÍDA", "image": "🚪", "audio": { "key": "words/saida", "text": "Saída" } },
+        { "id": "perigo", "label": "PERIGO", "image": "⚠️", "audio": { "key": "words/perigo", "text": "Perigo" } },
+        { "id": "onibus", "label": "ÔNIBUS", "image": "🚌", "audio": { "key": "words/onibus", "text": "Ônibus" } }
+      ],
+      "correctOptionId": "pare",
+      "hints": [
+        { "level": 1, "audio": { "key": "lesson-06/a1-dica1", "text": "É a placa que manda o carro parar." } },
+        { "level": 2, "audio": { "key": "shared/dica-elimina", "text": "Vou esconder duas opções. Agora ficou mais fácil." }, "eliminateOptions": ["saida", "onibus"] }
+      ]
+    },
+    {
+      "id": "lesson-06-a2",
+      "type": "word-to-meaning",
+      "narratesTarget": false,
+      "target": "SAÍDA",
+      "targetAudio": { "key": "words/saida", "text": "Saída" },
+      "prompt": { "key": "lesson-06/a2-prompt", "text": "Esta palavra mostra por onde a gente sai de um lugar. Toque no que ela significa." },
+      "options": [
+        { "id": "saida", "label": "SAÍDA", "image": "🚪", "audio": { "key": "words/saida", "text": "Saída" } },
+        { "id": "perigo", "label": "PERIGO", "image": "⚠️", "audio": { "key": "words/perigo", "text": "Perigo" } },
+        { "id": "pare", "label": "PARE", "image": "🛑", "audio": { "key": "words/pare", "text": "Pare" } },
+        { "id": "chave", "label": "CHAVE", "image": "🔑", "audio": { "key": "words/chave", "text": "Chave" } }
+      ],
+      "correctOptionId": "saida",
+      "hints": [
+        { "level": 1, "audio": { "key": "lesson-06/a2-dica1", "text": "A placa indica a porta para sair." } },
+        { "level": 2, "audio": { "key": "shared/dica-elimina", "text": "Vou esconder duas opções. Agora ficou mais fácil." }, "eliminateOptions": ["perigo", "chave"] }
+      ]
+    },
+    {
+      "id": "lesson-06-a3",
+      "type": "word-to-meaning",
+      "narratesTarget": false,
+      "target": "PERIGO",
+      "targetAudio": { "key": "words/perigo", "text": "Perigo" },
+      "prompt": { "key": "lesson-06/a3-prompt", "text": "Esta palavra avisa para tomar cuidado. Toque no sinal certo." },
+      "options": [
+        { "id": "perigo", "label": "PERIGO", "image": "⚠️", "audio": { "key": "words/perigo", "text": "Perigo" } },
+        { "id": "saida", "label": "SAÍDA", "image": "🚪", "audio": { "key": "words/saida", "text": "Saída" } },
+        { "id": "pare", "label": "PARE", "image": "🛑", "audio": { "key": "words/pare", "text": "Pare" } },
+        { "id": "maca", "label": "MAÇÃ", "image": "🍎", "audio": { "key": "words/maca", "text": "Maçã" } }
+      ],
+      "correctOptionId": "perigo",
+      "hints": [
+        { "level": 1, "audio": { "key": "lesson-06/a3-dica1", "text": "É o sinal de atenção, com ponto de exclamação." } },
+        { "level": 2, "audio": { "key": "shared/dica-elimina", "text": "Vou esconder duas opções. Agora ficou mais fácil." }, "eliminateOptions": ["saida", "maca"] }
+      ]
+    }
+  ]
+}

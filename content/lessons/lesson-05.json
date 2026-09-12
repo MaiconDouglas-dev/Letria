@@ -1,0 +1,72 @@
+{
+  "id": "lesson-05",
+  "contentVersion": "2026-09-12.1",
+  "title": "Palavra e figura",
+  "objective": "Diante de uma palavra escrita conhecida, a pessoa toca na figura que representa seu significado. Ouvir a palavra narrada conta como ajuda.",
+  "prerequisites": ["lesson-01"],
+  "estimatedMinutes": 6,
+  "intro": {
+    "key": "lesson-05/intro",
+    "text": "Agora um passo novo: a palavra aparece escrita. Olhe para ela com calma e toque na figura que ela quer dizer. Se precisar, o botãozinho de som ao lado lê a palavra para você."
+  },
+  "outro": { "key": "shared/outro", "text": "Você chegou ao fim desta lição. Muito bem pelo seu esforço!" },
+  "activities": [
+    {
+      "id": "lesson-05-a1",
+      "type": "word-to-meaning",
+      "narratesTarget": false,
+      "target": "CASA",
+      "targetAudio": { "key": "words/casa", "text": "Casa" },
+      "prompt": { "key": "lesson-05/a1-prompt", "text": "Leia a palavra na caixa e toque na figura que ela quer dizer." },
+      "options": [
+        { "id": "casa", "label": "CASA", "image": "🏠", "audio": { "key": "words/casa", "text": "Casa" } },
+        { "id": "bola", "label": "BOLA", "image": "⚽", "audio": { "key": "words/bola", "text": "Bola" } },
+        { "id": "sapo", "label": "SAPO", "image": "🐸", "audio": { "key": "words/sapo", "text": "Sapo" } },
+        { "id": "mala", "label": "MALA", "image": "👜", "audio": { "key": "words/mala", "text": "Mala" } }
+      ],
+      "correctOptionId": "casa",
+      "hints": [
+        { "level": 1, "audio": { "key": "lesson-05/a1-dica1", "text": "Preste atenção na primeira letra. Ela aparece no começo da palavra certa." } },
+        { "level": 2, "audio": { "key": "shared/dica-elimina", "text": "Vou esconder duas opções. Agora ficou mais fácil." }, "eliminateOptions": ["sapo", "mala"] }
+      ]
+    },
+    {
+      "id": "lesson-05-a2",
+      "type": "word-to-meaning",
+      "narratesTarget": false,
+      "target": "BOLA",
+      "targetAudio": { "key": "words/bola", "text": "Bola" },
+      "prompt": { "key": "lesson-05/a2-prompt", "text": "E esta palavra? Toque na figura que ela quer dizer." },
+      "options": [
+        { "id": "bola", "label": "BOLA", "image": "⚽", "audio": { "key": "words/bola", "text": "Bola" } },
+        { "id": "mala", "label": "MALA", "image": "👜", "audio": { "key": "words/mala", "text": "Mala" } },
+        { "id": "casa", "label": "CASA", "image": "🏠", "audio": { "key": "words/casa", "text": "Casa" } },
+        { "id": "sapo", "label": "SAPO", "image": "🐸", "audio": { "key": "words/sapo", "text": "Sapo" } }
+      ],
+      "correctOptionId": "bola",
+      "hints": [
+        { "level": 1, "audio": { "key": "lesson-05/a2-dica1", "text": "As duas primeiras letras fazem o som de bó." } },
+        { "level": 2, "audio": { "key": "shared/dica-elimina", "text": "Vou esconder duas opções. Agora ficou mais fácil." }, "eliminateOptions": ["mala", "casa"] }
+      ]
+    },
+    {
+      "id": "lesson-05-a3",
+      "type": "word-to-meaning",
+      "narratesTarget": false,
+      "target": "SAPO",
+      "targetAudio": { "key": "words/sapo", "text": "Sapo" },
+      "prompt": { "key": "lesson-05/a3-prompt", "text": "Mais uma. Leia a palavra e toque na figura." },
+      "options": [
+        { "id": "sapo", "label": "SAPO", "image": "🐸", "audio": { "key": "words/sapo", "text": "Sapo" } },
+        { "id": "bola", "label": "BOLA", "image": "⚽", "audio": { "key": "words/bola", "text": "Bola" } },
+        { "id": "mala", "label": "MALA", "image": "👜", "audio": { "key": "words/mala", "text": "Mala" } },
+        { "id": "casa", "label": "CASA", "image": "🏠", "audio": { "key": "words/casa", "text": "Casa" } }
+      ],
+      "correctOptionId": "sapo",
+      "hints": [
+        { "level": 1, "audio": { "key": "lesson-05/a3-dica1", "text": "A primeira letra é ésse, que começa a palavra sapato." } },
+        { "level": 2, "audio": { "key": "shared/dica-elimina", "text": "Vou esconder duas opções. Agora ficou mais fácil." }, "eliminateOptions": ["bola", "mala"] }
+      ]
+    }
+  ]
+}

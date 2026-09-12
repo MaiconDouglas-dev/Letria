@@ -1,0 +1,83 @@
+{
+  "id": "lesson-02",
+  "contentVersion": "2026-09-12.1",
+  "title": "Os sons das vogais",
+  "objective": "Ao ouvir o som de uma vogal, a pessoa seleciona a letra correspondente entre quatro opções.",
+  "prerequisites": ["lesson-01"],
+  "estimatedMinutes": 5,
+  "intro": {
+    "key": "lesson-02/intro",
+    "text": "Agora vamos conhecer as letras que chamamos de vogais. Você vai ouvir um som e tocar na letra que faz esse som."
+  },
+  "outro": { "key": "shared/outro", "text": "Você chegou ao fim desta lição. Muito bem pelo seu esforço!" },
+  "activities": [
+    {
+      "id": "lesson-02-a1",
+      "type": "listen-and-select",
+      "narratesTarget": true,
+      "prompt": { "key": "lesson-02/a1-prompt", "text": "Toque na letra que faz o som: á." },
+      "options": [
+        { "id": "a", "label": "A", "audio": { "key": "sounds/a", "text": "á" } },
+        { "id": "e", "label": "E", "audio": { "key": "sounds/e", "text": "é" } },
+        { "id": "i", "label": "I", "audio": { "key": "sounds/i", "text": "í" } },
+        { "id": "o", "label": "O", "audio": { "key": "sounds/o", "text": "ó" } }
+      ],
+      "correctOptionId": "a",
+      "hints": [
+        { "level": 1, "audio": { "key": "shared/dica-ouca", "text": "Escute de novo com calma." } },
+        { "level": 2, "audio": { "key": "shared/dica-elimina", "text": "Vou esconder duas opções. Agora ficou mais fácil." }, "eliminateOptions": ["i", "o"] }
+      ]
+    },
+    {
+      "id": "lesson-02-a2",
+      "type": "listen-and-select",
+      "narratesTarget": true,
+      "prompt": { "key": "lesson-02/a2-prompt", "text": "Toque na letra que faz o som: é." },
+      "options": [
+        { "id": "e", "label": "E", "audio": { "key": "sounds/e", "text": "é" } },
+        { "id": "a", "label": "A", "audio": { "key": "sounds/a", "text": "á" } },
+        { "id": "o", "label": "O", "audio": { "key": "sounds/o", "text": "ó" } },
+        { "id": "i", "label": "I", "audio": { "key": "sounds/i", "text": "í" } }
+      ],
+      "correctOptionId": "e",
+      "hints": [
+        { "level": 1, "audio": { "key": "shared/dica-ouca", "text": "Escute de novo com calma." } },
+        { "level": 2, "audio": { "key": "shared/dica-elimina", "text": "Vou esconder duas opções. Agora ficou mais fácil." }, "eliminateOptions": ["a", "o"] }
+      ]
+    },
+    {
+      "id": "lesson-02-a3",
+      "type": "listen-and-select",
+      "narratesTarget": true,
+      "prompt": { "key": "lesson-02/a3-prompt", "text": "Toque na letra que faz o som: i." },
+      "options": [
+        { "id": "i", "label": "I", "audio": { "key": "sounds/i", "text": "í" } },
+        { "id": "e", "label": "E", "audio": { "key": "sounds/e", "text": "é" } },
+        { "id": "a", "label": "A", "audio": { "key": "sounds/a", "text": "á" } },
+        { "id": "o", "label": "O", "audio": { "key": "sounds/o", "text": "ó" } }
+      ],
+      "correctOptionId": "i",
+      "hints": [
+        { "level": 1, "audio": { "key": "shared/dica-ouca", "text": "Escute de novo com calma." } },
+        { "level": 2, "audio": { "key": "shared/dica-elimina", "text": "Vou esconder duas opções. Agora ficou mais fácil." }, "eliminateOptions": ["e", "a"] }
+      ]
+    },
+    {
+      "id": "lesson-02-a4",
+      "type": "listen-and-select",
+      "narratesTarget": true,
+      "prompt": { "key": "lesson-02/a4-prompt", "text": "Para terminar, toque na letra que faz o som: ó." },
+      "options": [
+        { "id": "o", "label": "O", "audio": { "key": "sounds/o", "text": "ó" } },
+        { "id": "i", "label": "I", "audio": { "key": "sounds/i", "text": "í" } },
+        { "id": "e", "label": "E", "audio": { "key": "sounds/e", "text": "é" } },
+        { "id": "a", "label": "A", "audio": { "key": "sounds/a", "text": "á" } }
+      ],
+      "correctOptionId": "o",
+      "hints": [
+        { "level": 1, "audio": { "key": "shared/dica-ouca", "text": "Escute de novo com calma." } },
+        { "level": 2, "audio": { "key": "shared/dica-elimina", "text": "Vou esconder duas opções. Agora ficou mais fácil." }, "eliminateOptions": ["i", "e"] }
+      ]
+    }
+  ]
+}

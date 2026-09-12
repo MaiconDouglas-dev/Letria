@@ -1,0 +1,54 @@
+{
+  "id": "lesson-09",
+  "contentVersion": "2026-09-12.1",
+  "title": "Montando letra por letra",
+  "objective": "Ao ouvir uma palavra curta, a pessoa monta a palavra escrita tocando nas letras na ordem certa.",
+  "prerequisites": ["lesson-08"],
+  "estimatedMinutes": 6,
+  "intro": {
+    "key": "lesson-09/intro",
+    "text": "Agora o desafio maior: montar palavras letra por letra, como nas placas. Ouça a palavra e toque nas letras na ordem."
+  },
+  "outro": { "key": "shared/outro", "text": "Você chegou ao fim desta lição. Muito bem pelo seu esforço!" },
+  "activities": [
+    {
+      "id": "lesson-09-a1",
+      "type": "compose-word",
+      "narratesTarget": true,
+      "target": "PARE",
+      "pieces": ["P", "A", "R", "E"],
+      "distractors": ["O"],
+      "prompt": { "key": "lesson-09/a1-prompt", "text": "Monte a palavra da placa: pare. Letra por letra: pê, á, erre, é." },
+      "hints": [
+        { "level": 1, "audio": { "key": "lesson-09/a1-dica1", "text": "A primeira letra é pê, de panela." } },
+        { "level": 2, "audio": { "key": "shared/dica-elimina-pecas", "text": "Vou esconder a letra que não serve." }, "eliminateOptions": ["O"] }
+      ]
+    },
+    {
+      "id": "lesson-09-a2",
+      "type": "compose-word",
+      "narratesTarget": true,
+      "target": "OVO",
+      "pieces": ["O", "V", "O"],
+      "distractors": ["A"],
+      "prompt": { "key": "lesson-09/a2-prompt", "text": "Monte a palavra ovo: ó, vê, ó." },
+      "hints": [
+        { "level": 1, "audio": { "key": "lesson-09/a2-dica1", "text": "A palavra começa e termina com a mesma letra: ó." } },
+        { "level": 2, "audio": { "key": "shared/dica-elimina-pecas", "text": "Vou esconder a letra que não serve." }, "eliminateOptions": ["A"] }
+      ]
+    },
+    {
+      "id": "lesson-09-a3",
+      "type": "compose-word",
+      "narratesTarget": true,
+      "target": "RUA",
+      "pieces": ["R", "U", "A"],
+      "distractors": ["E"],
+      "prompt": { "key": "lesson-09/a3-prompt", "text": "Para terminar, monte a palavra rua: erre, u, á." },
+      "hints": [
+        { "level": 1, "audio": { "key": "lesson-09/a3-dica1", "text": "A primeira letra é erre." } },
+        { "level": 2, "audio": { "key": "shared/dica-elimina-pecas", "text": "Vou esconder a letra que não serve." }, "eliminateOptions": ["E"] }
+      ]
+    }
+  ]
+}

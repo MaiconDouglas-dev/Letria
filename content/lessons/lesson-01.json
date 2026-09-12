@@ -1,0 +1,126 @@
+{
+  "id": "lesson-01",
+  "contentVersion": "2026-09-12.1",
+  "title": "Ouvir e encontrar",
+  "objective": "Ao ouvir uma palavra conhecida do cotidiano, a pessoa seleciona a figura correspondente entre quatro opções, sem ajuda escrita.",
+  "prerequisites": [],
+  "estimatedMinutes": 5,
+  "intro": {
+    "key": "lesson-01/intro",
+    "text": "Olá! Nesta primeira lição, você vai ouvir uma palavra e tocar na figura certa. Não precisa saber ler. Se errar, pode tentar de novo quantas vezes quiser."
+  },
+  "outro": {
+    "key": "lesson-01/outro",
+    "text": "Você chegou ao fim desta lição. Muito bem pelo seu esforço de hoje! Da próxima vez, continuamos de onde você parou."
+  },
+  "activities": [
+    {
+      "id": "lesson-01-a1",
+      "type": "listen-and-select",
+      "narratesTarget": true,
+      "prompt": {
+        "key": "lesson-01/a1-prompt",
+        "text": "Ouça com atenção. Toque na figura do ônibus."
+      },
+      "options": [
+        { "id": "onibus", "label": "ÔNIBUS", "image": "🚌", "audio": { "key": "lesson-01/opt-onibus", "text": "Ônibus" } },
+        { "id": "maca", "label": "MAÇÃ", "image": "🍎", "audio": { "key": "lesson-01/opt-maca", "text": "Maçã" } },
+        { "id": "casa", "label": "CASA", "image": "🏠", "audio": { "key": "lesson-01/opt-casa", "text": "Casa" } },
+        { "id": "chave", "label": "CHAVE", "image": "🔑", "audio": { "key": "lesson-01/opt-chave", "text": "Chave" } }
+      ],
+      "correctOptionId": "onibus",
+      "hints": [
+        {
+          "level": 1,
+          "audio": { "key": "lesson-01/a1-dica1", "text": "Escute de novo com calma. A palavra começa com o som de ô." }
+        },
+        {
+          "level": 2,
+          "audio": { "key": "lesson-01/a1-dica2", "text": "Vou esconder duas figuras. Agora ficou mais fácil." },
+          "eliminateOptions": ["casa", "chave"]
+        }
+      ]
+    },
+    {
+      "id": "lesson-01-a2",
+      "type": "listen-and-select",
+      "narratesTarget": true,
+      "prompt": {
+        "key": "lesson-01/a2-prompt",
+        "text": "Agora, toque na figura da casa."
+      },
+      "options": [
+        { "id": "casa", "label": "CASA", "image": "🏠", "audio": { "key": "lesson-01/opt-casa", "text": "Casa" } },
+        { "id": "onibus", "label": "ÔNIBUS", "image": "🚌", "audio": { "key": "lesson-01/opt-onibus", "text": "Ônibus" } },
+        { "id": "maca", "label": "MAÇÃ", "image": "🍎", "audio": { "key": "lesson-01/opt-maca", "text": "Maçã" } },
+        { "id": "chave", "label": "CHAVE", "image": "🔑", "audio": { "key": "lesson-01/opt-chave", "text": "Chave" } }
+      ],
+      "correctOptionId": "casa",
+      "hints": [
+        {
+          "level": 1,
+          "audio": { "key": "lesson-01/a2-dica1", "text": "Pense no lugar onde você mora." }
+        },
+        {
+          "level": 2,
+          "audio": { "key": "lesson-01/a2-dica2", "text": "Vou esconder duas figuras. Agora ficou mais fácil." },
+          "eliminateOptions": ["onibus", "maca"]
+        }
+      ]
+    },
+    {
+      "id": "lesson-01-a3",
+      "type": "listen-and-select",
+      "narratesTarget": true,
+      "prompt": {
+        "key": "lesson-01/a3-prompt",
+        "text": "Toque na figura da chave."
+      },
+      "options": [
+        { "id": "chave", "label": "CHAVE", "image": "🔑", "audio": { "key": "lesson-01/opt-chave", "text": "Chave" } },
+        { "id": "casa", "label": "CASA", "image": "🏠", "audio": { "key": "lesson-01/opt-casa", "text": "Casa" } },
+        { "id": "onibus", "label": "ÔNIBUS", "image": "🚌", "audio": { "key": "lesson-01/opt-onibus", "text": "Ônibus" } },
+        { "id": "maca", "label": "MAÇÃ", "image": "🍎", "audio": { "key": "lesson-01/opt-maca", "text": "Maçã" } }
+      ],
+      "correctOptionId": "chave",
+      "hints": [
+        {
+          "level": 1,
+          "audio": { "key": "lesson-01/a3-dica1", "text": "É o objeto que usamos para abrir a porta." }
+        },
+        {
+          "level": 2,
+          "audio": { "key": "lesson-01/a3-dica2", "text": "Vou esconder duas figuras. Agora ficou mais fácil." },
+          "eliminateOptions": ["casa", "onibus"]
+        }
+      ]
+    },
+    {
+      "id": "lesson-01-a4",
+      "type": "listen-and-select",
+      "narratesTarget": true,
+      "prompt": {
+        "key": "lesson-01/a4-prompt",
+        "text": "Para terminar, toque na figura da maçã."
+      },
+      "options": [
+        { "id": "maca", "label": "MAÇÃ", "image": "🍎", "audio": { "key": "lesson-01/opt-maca", "text": "Maçã" } },
+        { "id": "chave", "label": "CHAVE", "image": "🔑", "audio": { "key": "lesson-01/opt-chave", "text": "Chave" } },
+        { "id": "casa", "label": "CASA", "image": "🏠", "audio": { "key": "lesson-01/opt-casa", "text": "Casa" } },
+        { "id": "onibus", "label": "ÔNIBUS", "image": "🚌", "audio": { "key": "lesson-01/opt-onibus", "text": "Ônibus" } }
+      ],
+      "correctOptionId": "maca",
+      "hints": [
+        {
+          "level": 1,
+          "audio": { "key": "lesson-01/a4-dica1", "text": "É uma fruta. Vermelha e redonda." }
+        },
+        {
+          "level": 2,
+          "audio": { "key": "lesson-01/a4-dica2", "text": "Vou esconder duas figuras. Agora ficou mais fácil." },
+          "eliminateOptions": ["chave", "onibus"]
+        }
+      ]
+    }
+  ]
+}

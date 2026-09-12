@@ -1,0 +1,64 @@
+IA: Esse é o tipo de decisão que vale pesquisar a fundo antes de opinar. Cinco perguntas rápidas para calibrar a pesquisa ao seu contexto:O maior risco do seu projeto não é técnico, é pedagógico. Copiar o Duolingo na superfície (XP, streaks, corações) sem copiar o motor dele (repetição espaçada, feedback imediato, progressão calibrada) produz um jogo bonito que não alfabetiza. E para adultos, há um agravante: a evidência de alfabetização vem quase toda de crianças, então o desenho precisa ser adaptado, não transplantado. Vou estruturar por camadas, do fundamento à execução.
+
+## A fundação pedagógica
+
+**Separe alfabetização de letramento.** Magda Soares, referência central no Brasil, define alfabetização como a técnica de decodificar (sons, letras, sílabas) e letramento como o uso social da leitura e escrita. Seu app precisa dos dois, em sequência: primeiro o aluno aprende a decodificar, depois aplica isso em situações reais (ler um preço, uma receita, um WhatsApp). App que só treina sílabas forma decodificadores; app que só mostra textos forma dependentes de áudio.
+
+**Consciência fonológica funciona em adultos, mas não sozinha.** Estudos brasileiros com adultos não alfabetizados mostram que a habilidade fonológica (perceber que "casa" tem três sílabas, que "pato" e "pato" rimam) é o melhor preditor de sucesso na alfabetização tardia ([Lopes, 2015](https://www.scielo.br/j/rcefac/a/4RYcFjVJNXbycSjZRfsW4yQ?lang=pt)). Mas o método fônico puro virou política oficial no Brasil (PNA, 2019) com forte crítica acadêmica por ignorar o contexto social. A leitura correta: use consciência fonológica como motor de decodificação, e letramento contextual como combustível de motivação. Um não existe sem o outro.
+
+**Andragogia: adulto aprende diferente de criança.** Knowles, o pai da educação de adultos, aponta quatro gatilhos: relevância imediata ("isso me serve hoje?"), uso da experiência de vida, autonomia e aplicação prática. Um adulto que não lê já resolve a vida com memória, contexto e apoio social há décadas. Ele não precisa de "apostila", precisa de um motivo concreto para decodificar. O app deve sempre responder à pergunta "para que vou ler isso?" antes de ensinar.
+
+**Interface oral primeiro.** Se o usuário não lê, todo o app precisa funcionar com áudio, ícones e vídeo. Isso não é acessibilidade, é o produto. A leitura emerge do que ele já entende por escuta: o app fala a palavra, mostra a imagem, e o aluno associa ao texto escrito. Digitação só entra em fases avançadas, e reconhecimento de voz é seu melhor aliado nas fases iniciais (o aluno fala, o app mostra o que ele disse escrito).
+
+## A trilha de progressão
+
+Defina um currículo explícito, com níveis nomeados por função de vida, não por conteúdo escolar. Sugestão de escada de letramento funcional:
+
+1. **Sobrevivência**: nome próprio, números, dinheiro, endereço, remédios, placas de perigo. É o nível que gera a primeira vitória emocional e o "agora faço sozinho".
+2. **Cotidiano**: mercado (lista, preços, validade), ônibus (linhas, horários), WhatsApp (mensagens, áudios transcritos), documentos básicos.
+3. **Digital**: digitar, senhas, buscar, preencher formulários. Aqui o app vira ferramenta de inclusão, não só de leitura.
+4. **Trabalho e cidadania**: avisos, contratos simples, direitos, boletos, e-mails.
+
+Cada nível tem objetivos mensuráveis (ler X palavras por minuto, decodificar Y sílabas, completar Z tarefas funcionais). Sem isso, você não sabe se o app funciona, e o jurado de hackathon também não.
+
+## Gamificação que respeita o adulto
+
+Mecânicas do Duolingo que transferem: repetição espaçada (o algoritmo decide o que revisar), feedback imediato e não punitivo, sequências diárias curtas (5 a 10 minutos), celebração de micro-vitórias, e "corações" como limite suave.
+
+Mecânicas que não transferem: **leaderboards públicos**. Adultos em alfabetização carregam vergonha e histórico de fracasso escolar; ranquear publicamente é humilhação, não motivação. Use metas pessoais, conquistas privadas e comparação consigo mesmo. O erro deve ser tratado como dado (o app aprende onde o aluno tropeça), nunca como fracasso exibido.
+
+## Arquitetura para múltiplos cenários
+
+Desenhe o produto como um motor central + camadas de cenário, em vez de três apps:
+
+- **Motor central**: currículo, algoritmo de repetição espaçada, análise de erros, reconhecimento de voz, progressão.
+- **Cenário autônomo**: o aluno sozinho, em casa, no celular. É o seu MVP atual.
+- **Cenário acompanhado**: um painel para educadores (EJA, ONGs) verem o progresso e os erros de cada aluno e intervirem. É o que destrava parcerias com escolas e ONGs, e o que dá credibilidade pedagógica.
+- **Cenário trabalho**: empresas que precisam alfabetizar funcionários para segurança e produtividade. É o que paga as contas.
+
+O dado de aprendizagem (erros, tempo, curva de progresso) é o ativo mais valioso do projeto: ele diferencia você de qualquer cartilha e alimenta o painel do educador.
+
+## Plano de evolução do MVP
+
+Para o hackathon, priorize o que prova a tese com menos esforço:
+
+1. **Currículo explícito**: mapeie 3 a 5 unidades completas (não 50), do som à palavra funcional, com áudio e imagem em tudo.
+2. **Uma mecânica de repetição espaçada simples**: o app revisa o que o aluno errou, mesmo que seja uma fila manual.
+3. **Reconhecimento de voz em uma unidade**: o momento "eu falei e apareceu escrito" é o wow do produto.
+4. **Teste com 3 a 5 adultos reais**: vale mais para o pitch do que qualquer feature. Um vídeo de um aluno lendo a própria lista de mercado pela primeira vez é o seu melhor slide.
+
+O que não fazer agora: leaderboards, moedas, avatares, conteúdo infinito. Foco em provar aprendizagem, não em provar jogo.
+
+**Minha recomendação clara**: invista o hackathon em provar a escada de letramento funcional com voz e repetição espaçada, e guarde o painel do educador como o diferencial de escalabilidade para o pitch. É a combinação que mostra profundidade pedagógica (o que os jurados de hackathon raramente veem) e visão de produto (o que investidores querem).
+
+Resumindo
+- Alfabetização (decodificar) e letramento (usar) são coisas diferentes; o app precisa das duas, nessa ordem.
+- Consciência fonológica é o motor técnico, mas contexto do dia a dia é o motor de motivação do adulto.
+- Interface 100% oral primeiro (áudio + ícones + voz), leitura emerge depois.
+- Gamificação sim, leaderboard público não: adulto em alfabetização precisa de vitória privada, não de ranking.
+- Motor central + cenários (autônomo, educador, trabalho) é a arquitetura que escala.
+
+Se quiser, posso:
+- Montar o mapa curricular completo da escada de letramento funcional, unidade por unidade
+- Desenhar o fluxo de UX de uma unidade (áudio → imagem → palavra → voz) como wireframe
+- Estruturar o pitch do hackathon em torno da prova de aprendizagem

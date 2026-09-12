@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Exec(node)",
+      "Exec(cp)",
+      "Exec(npx expo)",
+      "Exec(rm)",
+      "Exec(mkdir)",
+      "Exec(brew install)",
+      "Exec(sdkmanager)",
+      "Exec(avdmanager create)",
+      "Exec(bash)",
+      "Exec($ANDROID_HOME/platform-tools/adb devices)",
+      "Exec(/opt/homebrew/share/android-commandlinetools/emulator/emulator)",
+      "Exec(adb)",
+      "Exec(tail)",
+      "Exec(pip3 install)",
+      "Exec(npm run)",
+      "Exec(curl)",
+      "Exec(brew list)",
+      "Exec(sleep)"
+    ]
+  }
+}

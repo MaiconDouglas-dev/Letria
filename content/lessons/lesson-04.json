@@ -1,0 +1,83 @@
+{
+  "id": "lesson-04",
+  "contentVersion": "2026-09-12.1",
+  "title": "Juntando letras em sílabas",
+  "objective": "Ao ouvir uma sílaba simples (consoante + vogal), a pessoa seleciona a sílaba escrita correspondente.",
+  "prerequisites": ["lesson-02", "lesson-03"],
+  "estimatedMinutes": 5,
+  "intro": {
+    "key": "lesson-04/intro",
+    "text": "Quando uma consoante encontra uma vogal, elas formam uma sílaba. Agora você vai ouvir a sílaba e tocar nela escrita."
+  },
+  "outro": { "key": "shared/outro", "text": "Você chegou ao fim desta lição. Muito bem pelo seu esforço!" },
+  "activities": [
+    {
+      "id": "lesson-04-a1",
+      "type": "listen-and-select",
+      "narratesTarget": true,
+      "prompt": { "key": "lesson-04/a1-prompt", "text": "Toque na sílaba: má." },
+      "options": [
+        { "id": "ma", "label": "MA", "audio": { "key": "sounds/ma", "text": "má" } },
+        { "id": "sa", "label": "SA", "audio": { "key": "sounds/sa", "text": "sá" } },
+        { "id": "pa", "label": "PA", "audio": { "key": "sounds/pa", "text": "pá" } },
+        { "id": "la", "label": "LA", "audio": { "key": "sounds/la", "text": "lá" } }
+      ],
+      "correctOptionId": "ma",
+      "hints": [
+        { "level": 1, "audio": { "key": "lesson-04/a1-dica1", "text": "Má começa com a letra ême, de mamãe." } },
+        { "level": 2, "audio": { "key": "shared/dica-elimina", "text": "Vou esconder duas opções. Agora ficou mais fácil." }, "eliminateOptions": ["sa", "la"] }
+      ]
+    },
+    {
+      "id": "lesson-04-a2",
+      "type": "listen-and-select",
+      "narratesTarget": true,
+      "prompt": { "key": "lesson-04/a2-prompt", "text": "Toque na sílaba: sá." },
+      "options": [
+        { "id": "sa", "label": "SA", "audio": { "key": "sounds/sa", "text": "sá" } },
+        { "id": "pa", "label": "PA", "audio": { "key": "sounds/pa", "text": "pá" } },
+        { "id": "ma", "label": "MA", "audio": { "key": "sounds/ma", "text": "má" } },
+        { "id": "la", "label": "LA", "audio": { "key": "sounds/la", "text": "lá" } }
+      ],
+      "correctOptionId": "sa",
+      "hints": [
+        { "level": 1, "audio": { "key": "lesson-04/a2-dica1", "text": "Sá começa com a letra ésse, de sapato." } },
+        { "level": 2, "audio": { "key": "shared/dica-elimina", "text": "Vou esconder duas opções. Agora ficou mais fácil." }, "eliminateOptions": ["pa", "ma"] }
+      ]
+    },
+    {
+      "id": "lesson-04-a3",
+      "type": "listen-and-select",
+      "narratesTarget": true,
+      "prompt": { "key": "lesson-04/a3-prompt", "text": "Toque na sílaba: lá." },
+      "options": [
+        { "id": "la", "label": "LA", "audio": { "key": "sounds/la", "text": "lá" } },
+        { "id": "ma", "label": "MA", "audio": { "key": "sounds/ma", "text": "má" } },
+        { "id": "sa", "label": "SA", "audio": { "key": "sounds/sa", "text": "sá" } },
+        { "id": "pa", "label": "PA", "audio": { "key": "sounds/pa", "text": "pá" } }
+      ],
+      "correctOptionId": "la",
+      "hints": [
+        { "level": 1, "audio": { "key": "lesson-04/a3-dica1", "text": "Lá começa com a letra éle, de lugar." } },
+        { "level": 2, "audio": { "key": "shared/dica-elimina", "text": "Vou esconder duas opções. Agora ficou mais fácil." }, "eliminateOptions": ["ma", "pa"] }
+      ]
+    },
+    {
+      "id": "lesson-04-a4",
+      "type": "listen-and-select",
+      "narratesTarget": true,
+      "prompt": { "key": "lesson-04/a4-prompt", "text": "Para terminar, toque na sílaba: pá." },
+      "options": [
+        { "id": "pa", "label": "PA", "audio": { "key": "sounds/pa", "text": "pá" } },
+        { "id": "la", "label": "LA", "audio": { "key": "sounds/la", "text": "lá" } },
+        { "id": "ma", "label": "MA", "audio": { "key": "sounds/ma", "text": "má" } },
+        { "id": "sa", "label": "SA", "audio": { "key": "sounds/sa", "text": "sá" } }
+      ],
+      "correctOptionId": "pa",
+      "hints": [
+        { "level": 1, "audio": { "key": "lesson-04/a4-dica1", "text": "Pá começa com a letra pê, de panela." } },
+        { "level": 2, "audio": { "key": "shared/dica-elimina", "text": "Vou esconder duas opções. Agora ficou mais fácil." }, "eliminateOptions": ["la", "sa"] }
+      ]
+    }
+  ]
+}

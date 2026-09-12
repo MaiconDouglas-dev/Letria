@@ -1,0 +1,83 @@
+{
+  "id": "lesson-03",
+  "contentVersion": "2026-09-12.1",
+  "title": "Consoantes que abrem palavras",
+  "objective": "Ao ouvir o nome comum de uma consoante frequente (M, S, P, L), a pessoa seleciona a letra correspondente.",
+  "prerequisites": ["lesson-02"],
+  "estimatedMinutes": 5,
+  "intro": {
+    "key": "lesson-03/intro",
+    "text": "Agora quatro letras que aparecem no começo de muitas palavras: M, S, P e L. Ouça o nome da letra e toque nela."
+  },
+  "outro": { "key": "shared/outro", "text": "Você chegou ao fim desta lição. Muito bem pelo seu esforço!" },
+  "activities": [
+    {
+      "id": "lesson-03-a1",
+      "type": "listen-and-select",
+      "narratesTarget": true,
+      "prompt": { "key": "lesson-03/a1-prompt", "text": "Toque na letra ême, de mamãe." },
+      "options": [
+        { "id": "m", "label": "M", "audio": { "key": "sounds/m", "text": "ême" } },
+        { "id": "s", "label": "S", "audio": { "key": "sounds/s", "text": "ésse" } },
+        { "id": "p", "label": "P", "audio": { "key": "sounds/p", "text": "pê" } },
+        { "id": "l", "label": "L", "audio": { "key": "sounds/l", "text": "éle" } }
+      ],
+      "correctOptionId": "m",
+      "hints": [
+        { "level": 1, "audio": { "key": "lesson-03/a1-dica1", "text": "É a letra que começa a palavra mamãe." } },
+        { "level": 2, "audio": { "key": "shared/dica-elimina", "text": "Vou esconder duas opções. Agora ficou mais fácil." }, "eliminateOptions": ["s", "l"] }
+      ]
+    },
+    {
+      "id": "lesson-03-a2",
+      "type": "listen-and-select",
+      "narratesTarget": true,
+      "prompt": { "key": "lesson-03/a2-prompt", "text": "Toque na letra ésse, de sapato." },
+      "options": [
+        { "id": "s", "label": "S", "audio": { "key": "sounds/s", "text": "ésse" } },
+        { "id": "m", "label": "M", "audio": { "key": "sounds/m", "text": "ême" } },
+        { "id": "l", "label": "L", "audio": { "key": "sounds/l", "text": "éle" } },
+        { "id": "p", "label": "P", "audio": { "key": "sounds/p", "text": "pê" } }
+      ],
+      "correctOptionId": "s",
+      "hints": [
+        { "level": 1, "audio": { "key": "lesson-03/a2-dica1", "text": "É a letra que começa a palavra sapato." } },
+        { "level": 2, "audio": { "key": "shared/dica-elimina", "text": "Vou esconder duas opções. Agora ficou mais fácil." }, "eliminateOptions": ["m", "p"] }
+      ]
+    },
+    {
+      "id": "lesson-03-a3",
+      "type": "listen-and-select",
+      "narratesTarget": true,
+      "prompt": { "key": "lesson-03/a3-prompt", "text": "Toque na letra pê, de panela." },
+      "options": [
+        { "id": "p", "label": "P", "audio": { "key": "sounds/p", "text": "pê" } },
+        { "id": "l", "label": "L", "audio": { "key": "sounds/l", "text": "éle" } },
+        { "id": "m", "label": "M", "audio": { "key": "sounds/m", "text": "ême" } },
+        { "id": "s", "label": "S", "audio": { "key": "sounds/s", "text": "ésse" } }
+      ],
+      "correctOptionId": "p",
+      "hints": [
+        { "level": 1, "audio": { "key": "lesson-03/a3-dica1", "text": "É a letra que começa a palavra panela." } },
+        { "level": 2, "audio": { "key": "shared/dica-elimina", "text": "Vou esconder duas opções. Agora ficou mais fácil." }, "eliminateOptions": ["l", "s"] }
+      ]
+    },
+    {
+      "id": "lesson-03-a4",
+      "type": "listen-and-select",
+      "narratesTarget": true,
+      "prompt": { "key": "lesson-03/a4-prompt", "text": "Para terminar, toque na letra éle, de lugar." },
+      "options": [
+        { "id": "l", "label": "L", "audio": { "key": "sounds/l", "text": "éle" } },
+        { "id": "p", "label": "P", "audio": { "key": "sounds/p", "text": "pê" } },
+        { "id": "s", "label": "S", "audio": { "key": "sounds/s", "text": "ésse" } },
+        { "id": "m", "label": "M", "audio": { "key": "sounds/m", "text": "ême" } }
+      ],
+      "correctOptionId": "l",
+      "hints": [
+        { "level": 1, "audio": { "key": "lesson-03/a4-dica1", "text": "É a letra que começa a palavra lugar." } },
+        { "level": 2, "audio": { "key": "shared/dica-elimina", "text": "Vou esconder duas opções. Agora ficou mais fácil." }, "eliminateOptions": ["p", "m"] }
+      ]
+    }
+  ]
+}

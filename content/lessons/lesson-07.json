@@ -1,0 +1,54 @@
+{
+  "id": "lesson-07",
+  "contentVersion": "2026-09-12.1",
+  "title": "Montando palavras por sílabas",
+  "objective": "Ao ouvir uma palavra conhecida, a pessoa monta a palavra escrita tocando nas sílabas na ordem certa.",
+  "prerequisites": ["lesson-04"],
+  "estimatedMinutes": 6,
+  "intro": {
+    "key": "lesson-07/intro",
+    "text": "Agora vamos montar palavras como se fossem peças. Ouça a palavra e toque nas partes na ordem certa. Se encaixar errado, a peça volta sozinha."
+  },
+  "outro": { "key": "shared/outro", "text": "Você chegou ao fim desta lição. Muito bem pelo seu esforço!" },
+  "activities": [
+    {
+      "id": "lesson-07-a1",
+      "type": "compose-word",
+      "narratesTarget": true,
+      "target": "CASA",
+      "pieces": ["CA", "SA"],
+      "distractors": ["MA"],
+      "prompt": { "key": "lesson-07/a1-prompt", "text": "Monte a palavra casa. Toque nas partes na ordem: ca, sa." },
+      "hints": [
+        { "level": 1, "audio": { "key": "lesson-07/a1-dica1", "text": "A palavra começa com ca." } },
+        { "level": 2, "audio": { "key": "shared/dica-elimina-pecas", "text": "Vou esconder a parte que não serve." }, "eliminateOptions": ["MA"] }
+      ]
+    },
+    {
+      "id": "lesson-07-a2",
+      "type": "compose-word",
+      "narratesTarget": true,
+      "target": "BOLA",
+      "pieces": ["BO", "LA"],
+      "distractors": ["SA"],
+      "prompt": { "key": "lesson-07/a2-prompt", "text": "Agora monte a palavra bola: bo, la." },
+      "hints": [
+        { "level": 1, "audio": { "key": "lesson-07/a2-dica1", "text": "A palavra começa com bo." } },
+        { "level": 2, "audio": { "key": "shared/dica-elimina-pecas", "text": "Vou esconder a parte que não serve." }, "eliminateOptions": ["SA"] }
+      ]
+    },
+    {
+      "id": "lesson-07-a3",
+      "type": "compose-word",
+      "narratesTarget": true,
+      "target": "SAPO",
+      "pieces": ["SA", "PO"],
+      "distractors": ["LA"],
+      "prompt": { "key": "lesson-07/a3-prompt", "text": "Para terminar, monte a palavra sapo: sa, po." },
+      "hints": [
+        { "level": 1, "audio": { "key": "lesson-07/a3-dica1", "text": "A palavra começa com sa." } },
+        { "level": 2, "audio": { "key": "shared/dica-elimina-pecas", "text": "Vou esconder a parte que não serve." }, "eliminateOptions": ["LA"] }
+      ]
+    }
+  ]
+}

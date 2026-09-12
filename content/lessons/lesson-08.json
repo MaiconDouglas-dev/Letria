@@ -1,0 +1,54 @@
+{
+  "id": "lesson-08",
+  "contentVersion": "2026-09-12.1",
+  "title": "Mais palavras por sílabas",
+  "objective": "Montar palavras novas por sílabas com um distrator, sem modelo visível — palavras do cotidiano: mala, dado, fome.",
+  "prerequisites": ["lesson-07"],
+  "estimatedMinutes": 6,
+  "intro": {
+    "key": "lesson-08/intro",
+    "text": "Mais palavras para montar por partes. Agora sempre tem uma pecinha a mais que não serve. Ouça a palavra e monte."
+  },
+  "outro": { "key": "shared/outro", "text": "Você chegou ao fim desta lição. Muito bem pelo seu esforço!" },
+  "activities": [
+    {
+      "id": "lesson-08-a1",
+      "type": "compose-word",
+      "narratesTarget": true,
+      "target": "MALA",
+      "pieces": ["MA", "LA"],
+      "distractors": ["SA"],
+      "prompt": { "key": "lesson-08/a1-prompt", "text": "Monte a palavra mala: ma, la." },
+      "hints": [
+        { "level": 1, "audio": { "key": "lesson-08/a1-dica1", "text": "A palavra começa com ma, de mamãe." } },
+        { "level": 2, "audio": { "key": "shared/dica-elimina-pecas", "text": "Vou esconder a parte que não serve." }, "eliminateOptions": ["SA"] }
+      ]
+    },
+    {
+      "id": "lesson-08-a2",
+      "type": "compose-word",
+      "narratesTarget": true,
+      "target": "DADO",
+      "pieces": ["DA", "DO"],
+      "distractors": ["PA"],
+      "prompt": { "key": "lesson-08/a2-prompt", "text": "Monte a palavra dado, como o dado de jogo: da, do." },
+      "hints": [
+        { "level": 1, "audio": { "key": "lesson-08/a2-dica1", "text": "A palavra começa com da." } },
+        { "level": 2, "audio": { "key": "shared/dica-elimina-pecas", "text": "Vou esconder a parte que não serve." }, "eliminateOptions": ["PA"] }
+      ]
+    },
+    {
+      "id": "lesson-08-a3",
+      "type": "compose-word",
+      "narratesTarget": true,
+      "target": "FOME",
+      "pieces": ["FO", "ME"],
+      "distractors": ["LO"],
+      "prompt": { "key": "lesson-08/a3-prompt", "text": "Para terminar, monte a palavra fome: fo, me." },
+      "hints": [
+        { "level": 1, "audio": { "key": "lesson-08/a3-dica1", "text": "A palavra começa com fo." } },
+        { "level": 2, "audio": { "key": "shared/dica-elimina-pecas", "text": "Vou esconder a parte que não serve." }, "eliminateOptions": ["LO"] }
+      ]
+    }
+  ]
+}
