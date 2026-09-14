@@ -19,7 +19,8 @@ interface ProgressData {
  * Sem ranking, streak ou comparação — só o que a própria pessoa fez.
  */
 export default function Progress() {
-  const { audio, db, fontScale } = useServices();
+  const { audio, db, fontScale, colors: themeColors } = useServices();
+  const currentColors = themeColors ?? colors;
   const [data, setData] = useState<ProgressData | null>(null);
 
   useEffect(() => {
@@ -59,6 +60,7 @@ export default function Progress() {
           value={data ? `${data.lessonsDone} de ${data.lessonsTotal}` : '…'}
           onPress={() => audio.speakKey(lessonsKey)}
           fontScale={fontScale}
+          currentColors={currentColors}
         />
         <StatRow
           icon="⭐"
@@ -66,8 +68,9 @@ export default function Progress() {
           value={data ? String(data.independentActivities) : '…'}
           onPress={() => audio.speakKey(starsKey)}
           fontScale={fontScale}
+          currentColors={currentColors}
         />
-        <Text style={[styles.note, { fontSize: font.base * fontScale * 0.85 }]}>
+        <Text style={[styles.note, { fontSize: font.base * fontScale * 0.85, color: currentColors.textMuted }]}>
           ⭐ conta respostas certas que você deu sem ouvir a palavra e sem dica.
         </Text>
       </View>
@@ -75,18 +78,41 @@ export default function Progress() {
   );
 }
 
-function StatRow({ icon, label, value, onPress, fontScale }: { icon: string; label: string; value: string; onPress: () => void; fontScale: number }) {
+function StatRow({
+  icon,
+  label,
+  value,
+  onPress,
+  fontScale,
+  currentColors,
+}: {
+  icon: string;
+  label: string;
+  value: string;
+  onPress: () => void;
+  fontScale: number;
+  currentColors: any;
+}) {
   return (
     <Pressable
       onPress={onPress}
       accessibilityRole="button"
       accessibilityLabel={`${label}: ${value}. Toque para ouvir.`}
-      style={styles.row}
+      style={({ pressed }) => [
+        styles.row,
+        {
+          backgroundColor: currentColors.surface,
+          borderColor: currentColors.border,
+          borderBottomWidth: pressed ? 2 : 5,
+          borderBottomColor: currentColors.borderDark ?? currentColors.border,
+          transform: [{ translateY: pressed ? 3 : 0 }],
+        },
+      ]}
     >
       <Text style={styles.rowIcon}>{icon}</Text>
       <View style={styles.rowTextBox}>
-        <Text style={[styles.rowLabel, { fontSize: font.lg * fontScale * 0.85 }]}>{label}</Text>
-        <Text style={[styles.rowValue, { fontSize: font.xl * fontScale }]}>{value}</Text>
+        <Text style={[styles.rowLabel, { fontSize: font.lg * fontScale * 0.85, color: currentColors.textMuted }]}>{label}</Text>
+        <Text style={[styles.rowValue, { fontSize: font.xl * fontScale, color: currentColors.text }]}>{value}</Text>
       </View>
       <Text style={styles.rowIcon}>🔉</Text>
     </Pressable>
@@ -100,16 +126,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: spacing.md,
     minHeight: MIN_TOUCH + 40,
-    backgroundColor: colors.surface,
     borderRadius: 20,
-    borderWidth: 1,
-    borderColor: colors.border,
+    borderWidth: 1.5,
     paddingHorizontal: spacing.md,
     paddingVertical: spacing.sm,
   },
   rowIcon: { fontSize: 40 },
   rowTextBox: { flex: 1 },
-  rowLabel: { color: colors.textMuted, fontWeight: '700' },
-  rowValue: { color: colors.text, fontWeight: '900' },
-  note: { color: colors.textMuted, textAlign: 'center' },
+  rowLabel: { fontWeight: '700' },
+  rowValue: { fontWeight: '900' },
+  note: { textAlign: 'center' },
 });

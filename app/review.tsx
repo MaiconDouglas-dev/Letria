@@ -27,7 +27,8 @@ function shuffle<T>(arr: T[]): T[] {
  * com os activity_ids reais e alimentam a próxima seleção.
  */
 export default function Review() {
-  const { audio, db, fontScale } = useServices();
+  const { audio, db, fontScale, colors: themeColors } = useServices();
+  const currentColors = themeColors ?? colors;
   const [lesson, setLesson] = useState<Lesson | null>(null);
   const [empty, setEmpty] = useState(false);
 
@@ -66,7 +67,7 @@ export default function Review() {
       <ScreenShell title="Revisão" speakKey="home/nada-para-revisar">
         <View style={styles.center}>
           <Text style={styles.hero}>📚</Text>
-          <Text style={[styles.text, { fontSize: font.lg * fontScale }]}>
+          <Text style={[styles.text, { fontSize: font.lg * fontScale, color: currentColors.text }]}>
             Ainda não há nada para revisar.
           </Text>
           <BigButton label="Voltar ao início" onPress={() => router.replace('/home')} />
@@ -85,5 +86,5 @@ export default function Review() {
 const styles = StyleSheet.create({
   center: { flex: 1, alignItems: 'center', justifyContent: 'center', gap: spacing.lg },
   hero: { fontSize: 72 },
-  text: { textAlign: 'center', color: colors.text, fontWeight: '600' },
+  text: { textAlign: 'center', fontWeight: '600' },
 });
