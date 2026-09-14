@@ -1,20 +1,20 @@
 {
   "expo": {
-    "name": "Passo a Palavra",
-    "slug": "passo-a-palavra",
+    "name": "Letria",
+    "slug": "letria",
     "version": "0.1.0",
     "orientation": "portrait",
-    "scheme": "passoapalavra",
+    "scheme": "letria",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.passopalavra.app"
+      "bundleIdentifier": "com.letria.app"
     },
     "android": {
-      "package": "com.passopalavra.app",
+      "package": "com.letria.app",
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#0D1117",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"

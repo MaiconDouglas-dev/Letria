@@ -8,6 +8,7 @@ import {
   getActivityStats,
   getLessonProgress,
   getPreference,
+  getGamificationStats,
   recordAttempt,
   saveLessonProgress,
   setPreference,
@@ -146,5 +147,33 @@ describe('eraseAllProgress', () => {
     expect(await countAttempts(db, 'l')).toBe(0);
     expect(await getLessonProgress(db, 'l')).toBeNull();
     expect(await getPreference(db, 'onboarded')).toBeNull();
+  });
+});
+
+describe('getGamificationStats', () => {
+  it('calcula métricas de gamificação corretamente', async () => {
+    // Inicialmente zerado
+    let stats = await getGamificationStats(db);
+    expect(stats.completedLessons).toBe(0);
+    expect(stats.wordsLearned).toBe(0);
+
+    // Registra uma lição concluída e tentativas
+    await saveLessonProgress(db, 'lesson-01', 'v1', 'completed', 3);
+    await recordAttempt(db, {
+      activityId: 'a1',
+      lessonId: 'lesson-01',
+      contentVersion: 'v1',
+      selectedOption: 'onibus',
+      correct: true,
+      helpUsed: 0,
+      hintLevel: 0,
+      independentRead: true,
+    });
+
+    stats = await getGamificationStats(db);
+    expect(stats.completedLessons).toBe(1);
+    expect(stats.wordsLearned).toBeGreaterThan(0);
+    expect(stats.stars).toBeGreaterThan(0);
+    expect(stats.streakDays).toBeGreaterThanOrEqual(1);
   });
 });

@@ -28,7 +28,7 @@ export default function Onboarding() {
   const next = () => {
     if (last) {
       setPref(PREF_KEYS.onboarded, '1');
-      router.replace('/home');
+      router.replace('/(tabs)');
     } else {
       setStep((s) => s + 1);
     }

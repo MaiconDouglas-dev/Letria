@@ -1,36 +1,42 @@
 import { Redirect, router } from 'expo-router';
 import React, { useEffect } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
 import { PREF_KEYS, useServices } from '../src/services/ServicesProvider';
 import { BigButton } from '../src/shared/components/BigButton';
+import { Logo } from '../src/shared/components/Logo';
 import { ScreenShell } from '../src/shared/components/ScreenShell';
-import { colors, font, spacing } from '../src/shared/theme';
+import { spacing } from '../src/shared/theme';
 
-/** Tela de abertura: primeira execução mostra acolhimento; depois vai direto à home. */
+/** Tela de abertura: primeira execução mostra acolhimento; depois vai direto à Trilha. */
 export default function Index() {
   const { audio, prefs } = useServices();
 
   useEffect(() => {
-    audio.speakKey('onboarding/bem-vindo');
+    audio.speakPhrase('Bem-vindo ao Letria. Ler é um novo começo. Toque no botão grande para começar.');
     return () => audio.stop();
   }, [audio]);
 
-  if (prefs[PREF_KEYS.onboarded] === '1') return <Redirect href="/home" />;
+  if (prefs[PREF_KEYS.onboarded] === '1') return <Redirect href="/(tabs)" />;
 
   return (
-    <ScreenShell title="Passo a Palavra" showBack={false}>
+    <ScreenShell showBack={false}>
       <View style={styles.center}>
-        <Text style={styles.hero}>📖</Text>
-        <Text style={styles.tagline}>Um passo de cada vez.</Text>
+        <Logo size={150} showTagline />
         <View style={styles.col}>
           <BigButton
             label="Ouvir a apresentação"
             icon="🔊"
             variant="secondary"
-            onPress={() => audio.speakKey('onboarding/bem-vindo')}
+            onPress={() =>
+              audio.speakPhrase('Bem-vindo ao Letria. Aqui você aprende a ler e escrever sem pressa, no seu próprio ritmo.')
+            }
           />
-          <BigButton label="Começar" onPress={() => router.push('/onboarding')} accessibilityHint="Inicia a explicação de como usar" />
+          <BigButton
+            label="Começar"
+            onPress={() => router.push('/onboarding')}
+            accessibilityHint="Inicia a explicação de como usar o aplicativo"
+          />
         </View>
       </View>
     </ScreenShell>
@@ -38,8 +44,15 @@ export default function Index() {
 }
 
 const styles = StyleSheet.create({
-  center: { flex: 1, alignItems: 'center', justifyContent: 'center', gap: spacing.lg },
-  hero: { fontSize: 80 },
-  tagline: { fontSize: font.xl, color: colors.textMuted, fontWeight: '600', textAlign: 'center' },
-  col: { gap: spacing.md, alignSelf: 'stretch' },
+  center: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: spacing.xl,
+  },
+  col: {
+    gap: spacing.md,
+    alignSelf: 'stretch',
+    marginTop: spacing.md,
+  },
 });
