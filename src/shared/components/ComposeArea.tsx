@@ -1,8 +1,9 @@
 import React from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
+import { useServices } from '../../services/ServicesProvider';
 import { SpeechBalloon } from './SpeechBalloon';
-import { colors, font, MIN_TOUCH, spacing } from '../theme';
+import { colors as defaultColors, font, MIN_TOUCH, spacing } from '../theme';
 
 interface Props {
   /** Peças disponíveis (necessárias + distratores), já embaralhadas. */
@@ -33,17 +34,28 @@ function pieceWidth(p: string): number {
  * Peça errada ganha selo "ouvir de novo" e volta — sem vermelho de punição.
  */
 export function ComposeArea({ pieces, assembledIdx, wrongIdx, eliminatedIdx, onTapPiece, onUndo, fontScale, disabled, fill = '#91C875', border = '#355529' }: Props) {
+  let themeColors = defaultColors;
+  let isDark = false;
+  try {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const s = useServices();
+    if (s?.colors) themeColors = s.colors;
+    if (s?.isDark !== undefined) isDark = s.isDark;
+  } catch {
+    // fallback
+  }
+
   const used = new Set(assembledIdx);
   return (
     <View style={styles.root}>
       {/* Área de montagem: mostra o que já foi encaixado */}
-      <View style={styles.assembled}>
+      <View style={[styles.assembled, { backgroundColor: themeColors.surface, borderColor: isDark ? themeColors.borderStrong : themeColors.border }]}>
         {assembledIdx.length === 0 ? (
-          <Text style={[styles.placeholder, { fontSize: font.base * fontScale }]}>Toque nas partes em ordem</Text>
+          <Text style={[styles.placeholder, { fontSize: font.base * fontScale, color: themeColors.textMuted }]}>Toque nas partes em ordem</Text>
         ) : (
           assembledIdx.map((pi, pos) => (
             <View key={`${pi}-${pos}`} style={[styles.slot, { backgroundColor: fill, borderColor: border }]}>
-              <Text style={[styles.slotText, { fontSize: font.xl * fontScale, color: colors.text }]}>{pieces[pi]}</Text>
+              <Text style={[styles.slotText, { fontSize: font.xl * fontScale, color: themeColors.text }]}>{pieces[pi]}</Text>
             </View>
           ))
         )}
@@ -54,32 +66,36 @@ export function ComposeArea({ pieces, assembledIdx, wrongIdx, eliminatedIdx, onT
             accessibilityLabel="Apagar última parte"
             style={styles.undo}
           >
-            <Text style={styles.undoIcon}>⌫</Text>
+            <Text style={[styles.undoIcon, { color: themeColors.textMuted }]}>⌫</Text>
           </Pressable>
         )}
       </View>
 
-      {/* Peças para tocar */}
+      {/* Peças disponíveis para encaixar */}
       <View style={styles.piecesRow}>
-        {pieces.map((p, i) => {
+        {pieces.map((piece, i) => {
           const isUsed = used.has(i);
-          const isEliminated = eliminatedIdx.includes(i);
           const isWrong = wrongIdx === i;
+          const isEliminated = eliminatedIdx.includes(i);
+          if (isUsed || isEliminated) return null;
+
           return (
             <SpeechBalloon
-              key={`${p}-${i}`}
-              fill={fill}
-              border={border}
-              width={pieceWidth(p)}
+              key={`${piece}-${i}`}
+              width={pieceWidth(piece)}
               height={88}
               badge={isWrong ? 'speaker' : null}
               dimmed={isUsed || isEliminated}
               onPress={() => onTapPiece(i)}
               disabled={disabled || isUsed || isEliminated}
-              accessibilityLabel={`Parte ${p}`}
-              accessibilityHint="Toque para encaixar esta parte"
+              accessibilityLabel={`Parte ${piece}`}
+              accessibilityHint={isWrong ? 'Ouvir de novo' : 'Encaixar na palavra'}
+              fill={fill}
+              border={border}
             >
-              <Text style={[styles.pieceText, { fontSize: font.xl * fontScale, color: colors.text }]}>{p}</Text>
+              <Text style={[styles.pieceText, { fontSize: font.xl * fontScale, color: themeColors.text }]}>
+                {piece}
+              </Text>
             </SpeechBalloon>
           );
         })}
@@ -97,14 +113,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     gap: spacing.sm,
-    backgroundColor: colors.surface,
+    backgroundColor: defaultColors.surface,
     borderRadius: 24,
     borderWidth: 2,
-    borderColor: colors.border,
+    borderColor: defaultColors.border,
     borderStyle: 'dashed',
     padding: spacing.md,
   },
-  placeholder: { color: colors.textMuted, fontWeight: '600' },
+  placeholder: { color: defaultColors.textMuted, fontWeight: '600' },
   slot: {
     borderRadius: 999,
     borderWidth: 2,
@@ -117,7 +133,7 @@ const styles = StyleSheet.create({
   },
   slotText: { fontWeight: '900' },
   undo: { minWidth: MIN_TOUCH, minHeight: MIN_TOUCH, alignItems: 'center', justifyContent: 'center' },
-  undoIcon: { fontSize: 30, color: colors.textMuted },
+  undoIcon: { fontSize: 30, color: defaultColors.textMuted },
   piecesRow: { flexDirection: 'row', flexWrap: 'wrap', gap: spacing.md, justifyContent: 'center' },
   pieceText: { fontWeight: '900' },
 });

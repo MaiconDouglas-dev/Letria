@@ -17,10 +17,10 @@
       "narratesTarget": true,
       "prompt": { "key": "lesson-04/a1-prompt", "text": "Toque na sílaba: má." },
       "options": [
-        { "id": "ma", "label": "MA", "audio": { "key": "sounds/ma", "text": "má" } },
-        { "id": "sa", "label": "SA", "audio": { "key": "sounds/sa", "text": "sá" } },
-        { "id": "pa", "label": "PA", "audio": { "key": "sounds/pa", "text": "pá" } },
-        { "id": "la", "label": "LA", "audio": { "key": "sounds/la", "text": "lá" } }
+        { "id": "ma", "label": "MA", "image": "👜", "audio": { "key": "sounds/ma", "text": "má" } },
+        { "id": "sa", "label": "SA", "image": "👠", "audio": { "key": "sounds/sa", "text": "sá" } },
+        { "id": "pa", "label": "PA", "image": "🍞", "audio": { "key": "sounds/pa", "text": "pá" } },
+        { "id": "la", "label": "LA", "image": "🥫", "audio": { "key": "sounds/la", "text": "lá" } }
       ],
       "correctOptionId": "ma",
       "hints": [
@@ -34,10 +34,10 @@
       "narratesTarget": true,
       "prompt": { "key": "lesson-04/a2-prompt", "text": "Toque na sílaba: sá." },
       "options": [
-        { "id": "sa", "label": "SA", "audio": { "key": "sounds/sa", "text": "sá" } },
-        { "id": "pa", "label": "PA", "audio": { "key": "sounds/pa", "text": "pá" } },
-        { "id": "ma", "label": "MA", "audio": { "key": "sounds/ma", "text": "má" } },
-        { "id": "la", "label": "LA", "audio": { "key": "sounds/la", "text": "lá" } }
+        { "id": "sa", "label": "SA", "image": "👠", "audio": { "key": "sounds/sa", "text": "sá" } },
+        { "id": "pa", "label": "PA", "image": "🍞", "audio": { "key": "sounds/pa", "text": "pá" } },
+        { "id": "ma", "label": "MA", "image": "👜", "audio": { "key": "sounds/ma", "text": "má" } },
+        { "id": "la", "label": "LA", "image": "🥫", "audio": { "key": "sounds/la", "text": "lá" } }
       ],
       "correctOptionId": "sa",
       "hints": [
@@ -51,10 +51,10 @@
       "narratesTarget": true,
       "prompt": { "key": "lesson-04/a3-prompt", "text": "Toque na sílaba: lá." },
       "options": [
-        { "id": "la", "label": "LA", "audio": { "key": "sounds/la", "text": "lá" } },
-        { "id": "ma", "label": "MA", "audio": { "key": "sounds/ma", "text": "má" } },
-        { "id": "sa", "label": "SA", "audio": { "key": "sounds/sa", "text": "sá" } },
-        { "id": "pa", "label": "PA", "audio": { "key": "sounds/pa", "text": "pá" } }
+        { "id": "la", "label": "LA", "image": "🥫", "audio": { "key": "sounds/la", "text": "lá" } },
+        { "id": "ma", "label": "MA", "image": "👜", "audio": { "key": "sounds/ma", "text": "má" } },
+        { "id": "sa", "label": "SA", "image": "👠", "audio": { "key": "sounds/sa", "text": "sá" } },
+        { "id": "pa", "label": "PA", "image": "🍞", "audio": { "key": "sounds/pa", "text": "pá" } }
       ],
       "correctOptionId": "la",
       "hints": [
@@ -68,10 +68,10 @@
       "narratesTarget": true,
       "prompt": { "key": "lesson-04/a4-prompt", "text": "Para terminar, toque na sílaba: pá." },
       "options": [
-        { "id": "pa", "label": "PA", "audio": { "key": "sounds/pa", "text": "pá" } },
-        { "id": "la", "label": "LA", "audio": { "key": "sounds/la", "text": "lá" } },
-        { "id": "ma", "label": "MA", "audio": { "key": "sounds/ma", "text": "má" } },
-        { "id": "sa", "label": "SA", "audio": { "key": "sounds/sa", "text": "sá" } }
+        { "id": "pa", "label": "PA", "image": "🍞", "audio": { "key": "sounds/pa", "text": "pá" } },
+        { "id": "la", "label": "LA", "image": "🥫", "audio": { "key": "sounds/la", "text": "lá" } },
+        { "id": "ma", "label": "MA", "image": "👜", "audio": { "key": "sounds/ma", "text": "má" } },
+        { "id": "sa", "label": "SA", "image": "👠", "audio": { "key": "sounds/sa", "text": "sá" } }
       ],
       "correctOptionId": "pa",
       "hints": [

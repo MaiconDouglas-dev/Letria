@@ -17,10 +17,10 @@
       "narratesTarget": true,
       "prompt": { "key": "lesson-02/a1-prompt", "text": "Toque na letra que faz o som: á." },
       "options": [
-        { "id": "a", "label": "A", "audio": { "key": "sounds/a", "text": "á" } },
-        { "id": "e", "label": "E", "audio": { "key": "sounds/e", "text": "é" } },
-        { "id": "i", "label": "I", "audio": { "key": "sounds/i", "text": "í" } },
-        { "id": "o", "label": "O", "audio": { "key": "sounds/o", "text": "ó" } }
+        { "id": "a", "label": "A", "image": "✈️", "audio": { "key": "sounds/a", "text": "á" } },
+        { "id": "e", "label": "E", "image": "⭐", "audio": { "key": "sounds/e", "text": "é" } },
+        { "id": "i", "label": "I", "image": "⛪", "audio": { "key": "sounds/i", "text": "í" } },
+        { "id": "o", "label": "O", "image": "👓", "audio": { "key": "sounds/o", "text": "ó" } }
       ],
       "correctOptionId": "a",
       "hints": [
@@ -34,10 +34,10 @@
       "narratesTarget": true,
       "prompt": { "key": "lesson-02/a2-prompt", "text": "Toque na letra que faz o som: é." },
       "options": [
-        { "id": "e", "label": "E", "audio": { "key": "sounds/e", "text": "é" } },
-        { "id": "a", "label": "A", "audio": { "key": "sounds/a", "text": "á" } },
-        { "id": "o", "label": "O", "audio": { "key": "sounds/o", "text": "ó" } },
-        { "id": "i", "label": "I", "audio": { "key": "sounds/i", "text": "í" } }
+        { "id": "e", "label": "E", "image": "⭐", "audio": { "key": "sounds/e", "text": "é" } },
+        { "id": "a", "label": "A", "image": "✈️", "audio": { "key": "sounds/a", "text": "á" } },
+        { "id": "o", "label": "O", "image": "👓", "audio": { "key": "sounds/o", "text": "ó" } },
+        { "id": "i", "label": "I", "image": "⛪", "audio": { "key": "sounds/i", "text": "í" } }
       ],
       "correctOptionId": "e",
       "hints": [
@@ -51,10 +51,10 @@
       "narratesTarget": true,
       "prompt": { "key": "lesson-02/a3-prompt", "text": "Toque na letra que faz o som: i." },
       "options": [
-        { "id": "i", "label": "I", "audio": { "key": "sounds/i", "text": "í" } },
-        { "id": "e", "label": "E", "audio": { "key": "sounds/e", "text": "é" } },
-        { "id": "a", "label": "A", "audio": { "key": "sounds/a", "text": "á" } },
-        { "id": "o", "label": "O", "audio": { "key": "sounds/o", "text": "ó" } }
+        { "id": "i", "label": "I", "image": "⛪", "audio": { "key": "sounds/i", "text": "í" } },
+        { "id": "e", "label": "E", "image": "⭐", "audio": { "key": "sounds/e", "text": "é" } },
+        { "id": "a", "label": "A", "image": "✈️", "audio": { "key": "sounds/a", "text": "á" } },
+        { "id": "o", "label": "O", "image": "👓", "audio": { "key": "sounds/o", "text": "ó" } }
       ],
       "correctOptionId": "i",
       "hints": [
@@ -68,10 +68,10 @@
       "narratesTarget": true,
       "prompt": { "key": "lesson-02/a4-prompt", "text": "Para terminar, toque na letra que faz o som: ó." },
       "options": [
-        { "id": "o", "label": "O", "audio": { "key": "sounds/o", "text": "ó" } },
-        { "id": "i", "label": "I", "audio": { "key": "sounds/i", "text": "í" } },
-        { "id": "e", "label": "E", "audio": { "key": "sounds/e", "text": "é" } },
-        { "id": "a", "label": "A", "audio": { "key": "sounds/a", "text": "á" } }
+        { "id": "o", "label": "O", "image": "👓", "audio": { "key": "sounds/o", "text": "ó" } },
+        { "id": "i", "label": "I", "image": "⛪", "audio": { "key": "sounds/i", "text": "í" } },
+        { "id": "e", "label": "E", "image": "⭐", "audio": { "key": "sounds/e", "text": "é" } },
+        { "id": "a", "label": "A", "image": "✈️", "audio": { "key": "sounds/a", "text": "á" } }
       ],
       "correctOptionId": "o",
       "hints": [

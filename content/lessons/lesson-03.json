@@ -17,10 +17,10 @@
       "narratesTarget": true,
       "prompt": { "key": "lesson-03/a1-prompt", "text": "Toque na letra ême, de mamãe." },
       "options": [
-        { "id": "m", "label": "M", "audio": { "key": "sounds/m", "text": "ême" } },
-        { "id": "s", "label": "S", "audio": { "key": "sounds/s", "text": "ésse" } },
-        { "id": "p", "label": "P", "audio": { "key": "sounds/p", "text": "pê" } },
-        { "id": "l", "label": "L", "audio": { "key": "sounds/l", "text": "éle" } }
+        { "id": "m", "label": "M", "image": "🍎", "audio": { "key": "sounds/m", "text": "ême" } },
+        { "id": "s", "label": "S", "image": "🐸", "audio": { "key": "sounds/s", "text": "ésse" } },
+        { "id": "p", "label": "P", "image": "🦆", "audio": { "key": "sounds/p", "text": "pê" } },
+        { "id": "l", "label": "L", "image": "🍋", "audio": { "key": "sounds/l", "text": "éle" } }
       ],
       "correctOptionId": "m",
       "hints": [
@@ -34,10 +34,10 @@
       "narratesTarget": true,
       "prompt": { "key": "lesson-03/a2-prompt", "text": "Toque na letra ésse, de sapato." },
       "options": [
-        { "id": "s", "label": "S", "audio": { "key": "sounds/s", "text": "ésse" } },
-        { "id": "m", "label": "M", "audio": { "key": "sounds/m", "text": "ême" } },
-        { "id": "l", "label": "L", "audio": { "key": "sounds/l", "text": "éle" } },
-        { "id": "p", "label": "P", "audio": { "key": "sounds/p", "text": "pê" } }
+        { "id": "s", "label": "S", "image": "🐸", "audio": { "key": "sounds/s", "text": "ésse" } },
+        { "id": "m", "label": "M", "image": "🍎", "audio": { "key": "sounds/m", "text": "ême" } },
+        { "id": "l", "label": "L", "image": "🍋", "audio": { "key": "sounds/l", "text": "éle" } },
+        { "id": "p", "label": "P", "image": "🦆", "audio": { "key": "sounds/p", "text": "pê" } }
       ],
       "correctOptionId": "s",
       "hints": [
@@ -51,10 +51,10 @@
       "narratesTarget": true,
       "prompt": { "key": "lesson-03/a3-prompt", "text": "Toque na letra pê, de panela." },
       "options": [
-        { "id": "p", "label": "P", "audio": { "key": "sounds/p", "text": "pê" } },
-        { "id": "l", "label": "L", "audio": { "key": "sounds/l", "text": "éle" } },
-        { "id": "m", "label": "M", "audio": { "key": "sounds/m", "text": "ême" } },
-        { "id": "s", "label": "S", "audio": { "key": "sounds/s", "text": "ésse" } }
+        { "id": "p", "label": "P", "image": "🦆", "audio": { "key": "sounds/p", "text": "pê" } },
+        { "id": "l", "label": "L", "image": "🍋", "audio": { "key": "sounds/l", "text": "éle" } },
+        { "id": "m", "label": "M", "image": "🍎", "audio": { "key": "sounds/m", "text": "ême" } },
+        { "id": "s", "label": "S", "image": "🐸", "audio": { "key": "sounds/s", "text": "ésse" } }
       ],
       "correctOptionId": "p",
       "hints": [
@@ -68,10 +68,10 @@
       "narratesTarget": true,
       "prompt": { "key": "lesson-03/a4-prompt", "text": "Para terminar, toque na letra éle, de lugar." },
       "options": [
-        { "id": "l", "label": "L", "audio": { "key": "sounds/l", "text": "éle" } },
-        { "id": "p", "label": "P", "audio": { "key": "sounds/p", "text": "pê" } },
-        { "id": "s", "label": "S", "audio": { "key": "sounds/s", "text": "ésse" } },
-        { "id": "m", "label": "M", "audio": { "key": "sounds/m", "text": "ême" } }
+        { "id": "l", "label": "L", "image": "🍋", "audio": { "key": "sounds/l", "text": "éle" } },
+        { "id": "p", "label": "P", "image": "🦆", "audio": { "key": "sounds/p", "text": "pê" } },
+        { "id": "s", "label": "S", "image": "🐸", "audio": { "key": "sounds/s", "text": "ésse" } },
+        { "id": "m", "label": "M", "image": "🍎", "audio": { "key": "sounds/m", "text": "ême" } }
       ],
       "correctOptionId": "l",
       "hints": [
