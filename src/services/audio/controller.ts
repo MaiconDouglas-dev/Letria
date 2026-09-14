@@ -30,6 +30,7 @@ export class AudioController {
   private speakingTts = false;
   private enabled = true;
   private rate = 1;
+  private selectedVoice?: string;
   private finishListeners = new Set<FinishCallback>();
 
   async configure(): Promise<void> {
@@ -38,6 +39,31 @@ export class AudioController {
       shouldPlayInBackground: false,
       interruptionMode: 'doNotMix',
     });
+
+    try {
+      const voices = await Speech.getAvailableVoicesAsync();
+      const ptVoices = voices.filter(
+        (v) =>
+          v.language &&
+          (v.language.toLowerCase().includes('pt-br') ||
+            v.language.toLowerCase().includes('pt_br'))
+      );
+      // Prioritize Enhanced quality, neural or natural network voices for pt-BR
+      const bestVoice =
+        ptVoices.find((v) => v.quality === Speech.VoiceQuality.Enhanced) ??
+        ptVoices.find(
+          (v) =>
+            /neural|natural|network/i.test(v.identifier) ||
+            /neural|natural|network/i.test(v.name)
+        ) ??
+        ptVoices[0];
+
+      if (bestVoice) {
+        this.selectedVoice = bestVoice.identifier;
+      }
+    } catch {
+      // Continues with platform default if voice enumeration fails
+    }
   }
 
   /**
@@ -47,6 +73,15 @@ export class AudioController {
   speakKey(key: string | undefined): void {
     if (!key) return;
     this.speak(AUDIO_MANIFEST[key] ?? null, key, audioText(key));
+  }
+
+  /**
+   * Fala uma frase arbitrária (do Banco de Frases ou dinâmica) via síntese de voz nativa pt-BR.
+   * Cancela qualquer áudio anterior e respeita a velocidade configurada.
+   */
+  speakPhrase(text: string, tag?: string): void {
+    if (!text) return;
+    this.speak(null, tag, text);
   }
 
   /** Toca um asset de áudio, cancelando qualquer fala em andamento. */
@@ -124,9 +159,13 @@ export class AudioController {
 
   private speakTts(text: string, tag?: string): void {
     this.speakingTts = true;
+    // Calibrated natural rate: 0.92 delivers clearer articulation and a warmer, less rushed tone
+    const naturalRate = Math.min(1.0, Math.max(0.6, this.rate * 0.92));
     Speech.speak(text, {
       language: 'pt-BR',
-      rate: this.rate,
+      voice: this.selectedVoice,
+      rate: naturalRate,
+      pitch: 1.0,
       onDone: () => {
         this.speakingTts = false;
         this.finishListeners.forEach((cb) => cb(tag));

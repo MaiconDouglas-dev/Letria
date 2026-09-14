@@ -1,6 +1,5 @@
-// AUTOGERADO por scripts/gen-audio.mjs — não edite manualmente.
+// AUTOGERADO por scripts/generate-neural-voices.mjs — não edite manualmente.
 // Mapeia chave de áudio → asset empacotado (require estático para o Metro).
-// Áudios são PLACEHOLDERS de desenvolvimento — substituir por gravações profissionais.
 export const AUDIO_MANIFEST: Record<string, number> = {
   'help/explicacao': require('../../assets/audio/help/explicacao.m4a'),
   'home/ajustes': require('../../assets/audio/home/ajustes.m4a'),
