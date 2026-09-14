@@ -139,6 +139,57 @@ export async function countAttempts(db: DbDriver, lessonId: string): Promise<num
   return row?.n ?? 0;
 }
 
+export interface GamificationStats {
+  streakDays: number;
+  wordsLearned: number;
+  stars: number;
+  completedLessons: number;
+}
+
+/** Retorna as métricas de gamificação para o cabeçalho e tela de conquistas */
+export async function getGamificationStats(db: DbDriver): Promise<GamificationStats> {
+  // Lições concluídas
+  const completedRow = await db.get<{ n: number }>(
+    "SELECT COUNT(*) AS n FROM lesson_progress WHERE status = 'completed'"
+  );
+  const completedLessons = completedRow?.n ?? 0;
+
+  // Atividades respondidas corretamente de forma independente
+  const correctRow = await db.get<{ n: number }>(
+    'SELECT COUNT(DISTINCT activity_id) AS n FROM attempts WHERE correct = 1'
+  );
+  const correctActivities = correctRow?.n ?? 0;
+
+  // Palavras aprendidas: cada atividade concluída ensina palavras reais
+  const wordsLearned = Math.max(correctActivities, completedLessons * 4);
+
+  // Estrelas: 3 por lição concluída + 1 por atividade independente
+  const stars = completedLessons * 3 + Math.floor(correctActivities / 2);
+
+  // Cálculo de dias ativos consecutivos (ofensiva sem culpa)
+  const daysRows = await db.all<{ d: string }>(
+    "SELECT DISTINCT strftime('%Y-%m-%d', created_at) AS d FROM attempts ORDER BY d DESC"
+  );
+  let streak = 0;
+  if (daysRows.length > 0) {
+    const today = new Date().toISOString().slice(0, 10);
+    const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
+    const firstDay = daysRows[0].d;
+
+    // Se praticou hoje ou ontem, a sequência está viva
+    if (firstDay === today || firstDay === yesterday) {
+      streak = daysRows.length;
+    }
+  }
+
+  return {
+    streakDays: streak,
+    wordsLearned,
+    stars,
+    completedLessons,
+  };
+}
+
 /**
  * Apaga todo o progresso local (attempts + progresso + preferências).
  * Usado por "Apagar meu progresso" — exige confirmação dupla na UI.

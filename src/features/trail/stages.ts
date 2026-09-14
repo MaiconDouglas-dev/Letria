@@ -13,16 +13,33 @@ export interface TrailStage {
   fundo: string;
   /** Cor de borda e texto de apoio do momento. */
   borda: string;
+  darkFundo?: string;
+  darkBorda?: string;
 }
 
 export const TRAIL_STAGES: TrailStage[] = [
-  { id: 'boas-vindas', name: 'Boas-vindas', speakKey: 'trail/momento-1', icon: '🌱', balao: '#91C875', fundo: '#EAF3E5', borda: '#355529' },
-  { id: 'palavra-geradora', name: 'Palavra geradora', speakKey: 'trail/momento-2', icon: '💬', balao: '#76C6A2', fundo: '#E6F3EC', borda: '#285744' },
-  { id: 'silabas', name: 'Sílabas', speakKey: 'trail/momento-3', icon: '🧩', balao: '#72C3D5', fundo: '#E6F2F5', borda: '#28545F' },
-  { id: 'novas-palavras', name: 'Novas palavras', speakKey: 'trail/momento-4', icon: '📖', balao: '#8DB2DF', fundo: '#EAF0F8', borda: '#334C72' },
-  { id: 'frase-assistida', name: 'Frase assistida', speakKey: 'trail/momento-5', icon: '✍️', balao: '#ADA0D5', fundo: '#EFEBF7', borda: '#4B3B70' },
-  { id: 'conquista', name: 'Conquista', speakKey: 'trail/momento-6', icon: '🏆', balao: '#BE9BD5', fundo: '#F3EBF7', borda: '#603E78' },
+  { id: 'boas-vindas', name: 'Boas-vindas', speakKey: 'trail/momento-1', icon: '🌱', balao: '#10B981', fundo: '#F0FDF4', borda: '#059669', darkFundo: '#06261A', darkBorda: '#10B981' },
+  { id: 'palavra-geradora', name: 'Palavra geradora', speakKey: 'trail/momento-2', icon: '💬', balao: '#06B6D4', fundo: '#ECFEFF', borda: '#0891B2', darkFundo: '#07272F', darkBorda: '#06B6D4' },
+  { id: 'silabas', name: 'Sílabas', speakKey: 'trail/momento-3', icon: '🧩', balao: '#0EA5E9', fundo: '#F0F9FF', borda: '#0284C7', darkFundo: '#07253B', darkBorda: '#0EA5E9' },
+  { id: 'novas-palavras', name: 'Novas palavras', speakKey: 'trail/momento-4', icon: '📖', balao: '#3B82F6', fundo: '#EFF6FF', borda: '#2563EB', darkFundo: '#0D2147', darkBorda: '#3B82F6' },
+  { id: 'frase-assistida', name: 'Frase assistida', speakKey: 'trail/momento-5', icon: '✍️', balao: '#6366F1', fundo: '#EEF2FF', borda: '#4F46E5', darkFundo: '#181944', darkBorda: '#6366F1' },
+  { id: 'conquista', name: 'Conquista', speakKey: 'trail/momento-6', icon: '🏆', balao: '#8B5CF6', fundo: '#FAF5FF', borda: '#7C3AED', darkFundo: '#231444', darkBorda: '#8B5CF6' },
 ];
+
+/** Retorna o estágio com as cores do tema ativo (claro ou escuro) */
+export function getTrailStage(stageIndex: number, isDark = false): TrailStage {
+  const stage = TRAIL_STAGES[stageIndex] ?? TRAIL_STAGES[0];
+  if (!isDark) return stage;
+  return {
+    ...stage,
+    fundo: stage.darkFundo ?? '#0B0F17',
+    borda: stage.darkBorda ?? stage.balao,
+  };
+}
+
+export function getTrailStages(isDark = false): TrailStage[] {
+  return TRAIL_STAGES.map((_, i) => getTrailStage(i, isDark));
+}
 
 /**
  * Lição → momento (contíguo, na ordem do módulo — a trilha é um caminho linear).
